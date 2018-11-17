@@ -23,7 +23,7 @@ layout: post
             <hr>
             <!-- Post Content -->
             <h4>Background</h4>
-            <p class="lead">I am part of the infamous group that has went through the toughest fight to make it into this class. Many would say that we were just late to join, but as I know from an old *Romanian saying: "Important people should always make themselves waited" (this would be a rough word-to-word translation). While I do not believe in it, it does fit for the context so I'll just pretend it is right.</p>
+            <p>I am part of the infamous group that has went through the toughest fight to make it into this class. Many would say that we were just late to join, but as I know from an old *Romanian saying: "Important people should always make themselves waited" (this would be a rough word-to-word translation). While I do not believe in it, it does fit for the context so I'll just pretend it is right.</p>
             <p>Anyway, back to our story, as you know now, I have absolutely no clue what happened in the first 2 weeks of this class but I notice that everyone has an introductory blog post, or at least a line that says "Hey, this is my blog". I, as a totally legitimate member of this class that wants to ditch any affiliation with the late joiners, feel the need to make my introductory blog post... so here it is.</p>
             <h2>Hey, this is my blog.</h2>
             <blockquote class="blockquote">
