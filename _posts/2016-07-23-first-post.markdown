@@ -12,13 +12,13 @@ categories: jekyll update
 <div class="container">
     <div class="row">
         <!-- Post Content Column -->
-        <div class="col-lg-8">
+        <div class="col-lg-12">
             <!-- Title -->
-            <h1 class="mt-4">Post Title</h1>
+            <h1 class="mt-4">First day</h1>
             <!-- Author -->
             <p class="lead">
             by
-            <a href="#">Start Bootstrap</a>
+            <a href="#">Mohamad Zabad</a>
             </p>
             <hr>
             <!-- Date/Time -->
