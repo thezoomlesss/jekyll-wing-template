@@ -32,8 +32,8 @@ layout: post
             <p>So there goes Ben explaining how he got most of the barcode detection working and we are amazed by the progress. We quickly put on the table what is left to do and who takes on what. Since we are a team of three, we decided to add more complexity to our project by adding detection for QR codes too. Quickly to be followed up by decoding both barcodes and QR codes.<br>The work on the barcodes would fall on Ben since he had started his part already and Robert had an idea about the QR codes so he took over that too.<br>We quickly realised that there wasn't much for me to do since we were 3 people and only 2 tasks. While the other two tasks were big and difficult, the execution on them wasn't always perfect and they were dependent on the quality of the images added. That's when we decided that I would take over preparing the images for the detection and encorder. That means cleaning images, aligning them and making the important features stand out.</p>
             <p>At that we called it a day and went on for a week.</p>
             <blockquote class="blockquote">
-                <p class="mb-0">I can't stop reading this blog</p>
-                <footer class="blockquote-footer">You 
+                <p class="mb-0">What will the protagonist do in the next episode</p>
+                <footer class="blockquote-footer">omg nobody cares
                     <cite title="Source Title"></cite>
                 </footer>
             </blockquote>
