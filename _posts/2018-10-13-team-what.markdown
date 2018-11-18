@@ -23,19 +23,19 @@ layout: post
             <hr>
             <!-- Post Content -->
             <h4>Background</h4>
-            <p>As you may know from the blog <a href="{{ "/2018/10/12/first-day.html" | prepend: site.baseurl }}">post #1</a>, I had to go through the most fierce and intense battle with DIT in order to be able to say that I am part of the DT228's Image Processing class. He believed that everything was done and it would all be become simpler, but this project blog post is here to prove it wrong.</p>
-            <img class="img-fluid rounded" src="{{ "/assets/gandalf.jpg" | prepend: site.baseurl }}" alt="Gandalf iamge confused about teams">
+            <p>As you may know from the blog <a href="{{ "/2018/10/12/first-day.html" | prepend: site.baseurl }}">post #1</a>, I had to go through the most fierce and intense battle with DIT in order to be able to say that I am part of the DT228's Image Processing class. He believed that everything was done and it would all be become simpler, but this project blog post is here to prove it wrong.</p><br>
+            <img class="img-fluid rounded" src="{{ "/assets/gandalf.jpg" | prepend: site.baseurl }}" alt="Gandalf iamge confused about teams"><br>
             <h4>The fight for the project teammates!</h4>
             <p>Have you ever had that moment where you are simply sitting and relaxing after doing a lot of work and you think to yourself "This is it. It's over and I did it!", just to be hit in the face by the hidden challenger that was getting closer and closer to you. In my case, it was exactly like that when I first heard the word "teams" and "group project". I immediate realised that I was missing something.</p>
-            <p>The prospect was looking grim. All the people I knew were already in a team and on top of that, all the interesting projects were also taken. <b>TRAGEDY!</b> What should I do? What would you do?<br> Well, in the end I took the short end of the stick and chose a project about clarifying text in images and I teamed up with two random classmates. It may not sound that bad but considering the fact that I missed the first 2 weeks, you can guess what my reaction was when I found out that my teammate missed the first 3 and will be missing one more week.</p>
-            <img class="img-fluid rounded" src="{{ "/assets/abandon.jpg" | prepend: site.baseurl }}" alt="Image about abandoning the ship">
+            <p>The prospect was looking grim. All the people I knew were already in a team and on top of that, all the interesting projects were also taken. <b>TRAGEDY!</b> What should I do? What would you do?<br> Well, in the end I took the short end of the stick and chose a project about clarifying text in images and I teamed up with two random classmates. It may not sound that bad but considering the fact that I missed the first 2 weeks, you can guess what my reaction was when I found out that my teammate missed the first 3 and will be missing one more week.</p><br>
+            <img class="img-fluid rounded" src="{{ "/assets/abandon.jpg" | prepend: site.baseurl }}" alt="Image about abandoning the ship"><br>
             <br>Now, I am no captain and this is a floating raft going to war against few cruiser ships.<br>
             While under contract with my teammates, I kept my options open and I looked for new contracts with other teams.<br>
-            That's when I joined Ben Ryan's and Robert Vaughan on detecting barcodes (with a little twist which we will talk about in the next post).
+            That's when I joined Ben Ryan's and Robert Vaughan on detecting barcodes (with a little twist which we will talk about in the next post).<br>
             <blockquote class="blockquote">
-                <p class="mb-0">5 out of 7 Introduction </p>
-                <footer class="blockquote-footer">Probably no-one 
-                    <cite title="Source Title">from Nowhereville</cite>
+                <p class="mb-0">I can't stop reading this blog</p>
+                <footer class="blockquote-footer">You 
+                    <cite title="Source Title"></cite>
                 </footer>
             </blockquote>
         </div>
