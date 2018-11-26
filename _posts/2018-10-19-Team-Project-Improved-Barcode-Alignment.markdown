@@ -26,12 +26,12 @@ layout: post
             <p>For my project that I am doing for my Image Processing class, I have been tasked with the responsability of handling the image rotation. That means that my goal would be to take an image as an input, rotate it to the right alignment and then pass the rotated image to my colleagues part of the code, where the rest of the magic can happen.<br>Here we can have a look at the code that does this for us and below we will see an explanation.</p><br>
             <img class="img-fluid rounded" src="{{ "/assets/rotated.PNG" | prepend: site.baseurl }}" alt="Image code used for rotation"><br>
             <h4>Some of the results produced on barcodes and QR codes</h4>
-            <img class="img-fluid rounded" style="display: inline-block" src="{{ "/assets/5R5mX0JX.jpg" | prepend: site.baseurl }}" alt="Image of a barcdoe">
-            <img class="img-fluid rounded" style="display: inline-block" src="{{ "/assets/qr_code_rotated.PNG" | prepend: site.baseurl }}" alt="Image of a barcdoe"><br><br>
-            <img class="img-fluid rounded" style="display: inline-block" src="{{ "/assets/barcodediag.jpg" | prepend: site.baseurl }}" alt="Image of a barcdoe">
-            <img class="img-fluid rounded" style="display: inline-block" src="{{ "/assets/Barcode_out.jpg" | prepend: site.baseurl }}" alt="Image of a barcdoe"><br><br>
-            <img class="img-fluid rounded" style="display: inline-block" src="{{ "/assets/BackCover_CreateSpaceAutoBarcode.jpg" | prepend: site.baseurl }}" alt="Image of a barcdoe">
-            <img class="img-fluid rounded" style="display: inline-block" src="{{ "/assets/rotated_barcode_2.PNG" | prepend: site.baseurl }}" alt="Image of a barcdoe"><br><br>
+            <img class="img-fluid rounded" style="display: inline-block,width: 345px;" src="{{ "/assets/5R5mX0JX.jpg" | prepend: site.baseurl }}" alt="Image of a barcdoe">
+            <img class="img-fluid rounded" style="display: inline-block,width: 345px;" src="{{ "/assets/qr_code_rotated.PNG" | prepend: site.baseurl }}" alt="Image of a barcdoe"><br><br>
+            <img class="img-fluid rounded" style="display: inline-block,width: 345px;" src="{{ "/assets/barcodediag.jpg" | prepend: site.baseurl }}" alt="Image of a barcdoe">
+            <img class="img-fluid rounded" style="display: inline-block,width: 345px;" src="{{ "/assets/Barcode_out.jpg" | prepend: site.baseurl }}" alt="Image of a barcdoe"><br><br>
+            <img class="img-fluid rounded" style="display: inline-block,width: 345px;" src="{{ "/assets/BackCover_CreateSpaceAutoBarcode.jpg" | prepend: site.baseurl }}" alt="Image of a barcdoe">
+            <img class="img-fluid rounded" style="display: inline-block,width: 345px;" src="{{ "/assets/rotated_barcode_2.PNG" | prepend: site.baseurl }}" alt="Image of a barcdoe"><br><br>
             <p>This code follows closely the idea of the code found in the previous post, with the one difference being that this one is improving the algorithm by first applying a GaussianBlur before thresholding so it gives better results on lower quality images. This has proven to be a great improvement on images that we found to be more difficult to deal with.</p>
             <p>The sequence the code is following is simple:
             <ul>
