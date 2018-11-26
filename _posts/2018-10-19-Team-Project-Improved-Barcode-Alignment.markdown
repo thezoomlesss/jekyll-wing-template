@@ -26,15 +26,15 @@ layout: post
             <p>For my project that I am doing for my Image Processing class, I have been tasked with the responsability of handling the image rotation. That means that my goal would be to take an image as an input, rotate it to the right alignment and then pass the rotated image to my colleagues part of the code, where the rest of the magic can happen.<br>Here we can have a look at the code that does this for us and below we will see an explanation.</p><br>
             <img class="img-fluid rounded" src="{{ "/assets/rotated.PNG" | prepend: site.baseurl }}" alt="Image code used for rotation"><br>
             <h4>Some of the results produced on barcodes and QR codes</h4>
-            <img class="img-fluid rounded" src="{{ "/assets/5R5mX0JX.jpg" | prepend: site.baseurl }}" alt="Image of a barcdoe"><br><br>
-            <img class="img-fluid rounded" src="{{ "/assets/qr_code_rotated.PNG" | prepend: site.baseurl }}" alt="Image of a barcdoe"><br><br>
-            <img class="img-fluid rounded" src="{{ "/assets/barcodediag.jpg" | prepend: site.baseurl }}" alt="Image of a barcdoe"><br><br>
-            <img class="img-fluid rounded" src="{{ "/assets/Barcode_out.jpg" | prepend: site.baseurl }}" alt="Image of a barcdoe"><br><br>
-            <img class="img-fluid rounded" src="{{ "/assets/BackCover_CreateSpaceAutoBarcode.jpg" | prepend: site.baseurl }}" alt="Image of a barcdoe"><br><br>
-            <img class="img-fluid rounded" src="{{ "/assets/rotated_barcode_2.PNG" | prepend: site.baseurl }}" alt="Image of a barcdoe"><br><br>
+            <img class="img-fluid rounded" style="display: inline-block" src="{{ "/assets/5R5mX0JX.jpg" | prepend: site.baseurl }}" alt="Image of a barcdoe">
+            <img class="img-fluid rounded" style="display: inline-block" src="{{ "/assets/qr_code_rotated.PNG" | prepend: site.baseurl }}" alt="Image of a barcdoe"><br><br>
+            <img class="img-fluid rounded" style="display: inline-block" src="{{ "/assets/barcodediag.jpg" | prepend: site.baseurl }}" alt="Image of a barcdoe">
+            <img class="img-fluid rounded" style="display: inline-block" src="{{ "/assets/Barcode_out.jpg" | prepend: site.baseurl }}" alt="Image of a barcdoe"><br><br>
+            <img class="img-fluid rounded" style="display: inline-block" src="{{ "/assets/BackCover_CreateSpaceAutoBarcode.jpg" | prepend: site.baseurl }}" alt="Image of a barcdoe">
+            <img class="img-fluid rounded" style="display: inline-block" src="{{ "/assets/rotated_barcode_2.PNG" | prepend: site.baseurl }}" alt="Image of a barcdoe"><br><br>
             <p>This code follows closely the idea of the code found in the previous post, with the one difference being that this one is improving the algorithm by first applying a GaussianBlur before thresholding so it gives better results on lower quality images. This has proven to be a great improvement on images that we found to be more difficult to deal with.</p>
             <p>The sequence the code is following is simple:
-            <ol>
+            <ul>
                 <li>Convert to Grayscale</li>
                 <li>Blur the image with a Gaussian Blur</li>
                 <li>Reverse the colours with a bitwise_not on the blurred image</li>
@@ -44,7 +44,7 @@ layout: post
                 <li>Test against the angle to see the direction of rotation</li>
                 <li>Get the center and calculate the rotation matrix needed to be applied</li>
                 <li>Rotate with warpAffine and return the image </li>
-            </ol>
+            </ul>
             </p>
         </div>
     </div>
