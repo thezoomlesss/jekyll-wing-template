@@ -19,13 +19,13 @@ layout: post
             <p>Posted on October 18, 2018 at 15:00</p>
             <hr>
             <!-- Preview Image -->
-            <img class="img-fluid rounded" src="{{ "/assets/angle.PNG" | prepend: site.baseurl }}" alt="Confused">
+            <img class="img-fluid rounded" src="{{ "/assets/wall_aling.PNG" | prepend: site.baseurl }}" alt="Confused">
             <hr>
             <!-- Post Content -->
             <h4>In the previous episo... post... I mean post...</h4>
             <p>Although I referred to the rotation of an image as \"alignment\", it turns out that you can have a perfectly rotated image without having a perfectly aligned barcode.</p><br>
             <img class="img-fluid rounded" src="{{ "/assets/mindblow.gif" | prepend: site.baseurl }}" alt="Image code used for rotation"><br>
-            <h4>That's where the problem starts</h4>
+            <br><h4>That's where the problem starts</h4><br>
             <img class="img-fluid rounded" style="display: inline-block,width: 345px;" src="{{ "/assets/notrotnotalig.PNG" | prepend: site.baseurl }}" alt="Image of a barcdoe">
             <img class="img-fluid rounded" style="display: inline-block,width: 345px;" src="{{ "/assets/rotated_not_aligned.png" | prepend: site.baseurl }}" alt="Image of a barcdoe"><br><br>
             <p>As you can see form the pictures above, the first one is a barcode that is neither rotated, nor aligned, while the second one is perfectly rotated but the alignment of the bars is off. This has proven to be quite a challenege for all of my team because our solution relied on decently aligned images in order to decode the information contained inside them. </p>
@@ -33,7 +33,7 @@ layout: post
             <img class="img-fluid rounded" style="display: inline-block,width: 345px;" src="{{ "/assets/rotated_not_aligned.png" | prepend: site.baseurl }}" alt="Image of a barcdoe">
             <img class="img-fluid rounded" style="display: inline-block,width: 345px;" src="{{ "/assets/aligned.PNG" | prepend: site.baseurl }}" alt="Image of a barcdoe"><br><br>
             <p>While this is the worst case scenario, you don't really want to put in your code a solution that works only at times. Unless your standards are so low that you'd be happy with a 70% success rate and 30% disaster, then there you go, problem solved.<br> In my team we did take this as a serious issue and after discussing with my team members, Ben Ryan and Rober Vaughan, we decided to keep it out of the final solution.</p>
-            <img class="img-fluid rounded" src="{{ "/assets/align_code_.PNG" | prepend: site.baseurl }}" alt="Image of a barcdoe"><br><br>
+            <img class="img-fluid rounded" src="{{ "/assets/align_code.PNG" | prepend: site.baseurl }}" alt="Image of a barcdoe"><br><br>
             <p>Behold the code! Don't worry because we will have a quick run down through it and we will explain every bit of it. If you have read the previous blog post, you will see that I am re-using a bit of the code there, especially at the start. However, from the part where Canny is applied, it's all new!</p>
             <p>In this code we:</p>
             <ul>
