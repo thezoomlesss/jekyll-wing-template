@@ -8984,3 +8984,6 @@ body > div > div > div > article > div > div > div > div > div > ul{
   list-style-type: square !important;
 
 }
+body > div > div > div > div > div.posts.card > div > ul > li > span{
+  color: #000;
+}
