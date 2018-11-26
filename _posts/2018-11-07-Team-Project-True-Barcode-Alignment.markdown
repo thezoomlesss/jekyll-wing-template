@@ -19,11 +19,11 @@ layout: post
             <p>Posted on October 18, 2018 at 15:00</p>
             <hr>
             <!-- Preview Image -->
-            <img class="img-fluid rounded" src="{{ "/assets/wall_aling.PNG" | prepend: site.baseurl }}" alt="Confused">
+            <img class="img-fluid rounded" src="{{ "/assets/wall_aling.png" | prepend: site.baseurl }}" alt="Confused">
             <hr>
             <!-- Post Content -->
             <h4>In the previous episo... post... I mean post...</h4>
-            <p>Although I referred to the rotation of an image as \"alignment\", it turns out that you can have a perfectly rotated image without having a perfectly aligned barcode.</p><br>
+            <p>Although I referred to the rotation of an image as "alignment", it turns out that you can have a perfectly rotated image without having a perfectly aligned barcode.</p><br>
             <img class="img-fluid rounded" src="{{ "/assets/mindblow.gif" | prepend: site.baseurl }}" alt="Image code used for rotation"><br>
             <br><h4>That's where the problem starts</h4><br>
             <img class="img-fluid rounded" style="display: inline-block,width: 345px;" src="{{ "/assets/notrotnotalig.PNG" | prepend: site.baseurl }}" alt="Image of a barcdoe">
