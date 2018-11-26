@@ -16,29 +16,36 @@ layout: post
             </p>
             <hr>
             <!-- Date/Time -->
-            <p>Posted on October 13, 2018 at 15:00</p>
+            <p>Posted on October 18, 2018 at 15:00</p>
             <hr>
             <!-- Preview Image -->
-            <img class="img-fluid rounded" src="{{ "/assets/lost.jpg" | prepend: site.baseurl }}" alt="Confused">
+            <img class="img-fluid rounded" src="{{ "/assets/angle.PNG" | prepend: site.baseurl }}" alt="Confused">
             <hr>
             <!-- Post Content -->
-            <h4>Where do I start?</h4>
-            <p>Having little to no experience with Image processing and having to solve a problem where you need to understand at least the basiscs of OpenCV can seem a bit daunting at first. Without the base already set up in your mind and knowing which path you should follow, you quickly realise that you've been stuck at the first page of google search, having no clue what to look up.</p><br>
-            <img class="img-fluid rounded" src="{{ "/assets/google.PNG" | prepend: site.baseurl }}" alt="Image of the homepage of google search"><br>
-            <h4>Attempt one: Find the first and last bar of the barcode</h4>
-            <p>The idea here was to figure out the orientation of the barcode by using the only 2 points that are surely different from the rest of the element.<br>
-            Normally, the barcodes we were using started with a long bar at the start and ended with another one. In theory, this was a great idea as I could've used that and compared it to the rest of the element to figure out if it was upside down.</p>
-            The problem is that the barcode looks like this normally:<br>
-            <img class="img-fluid rounded" src="{{ "/assets/barcode-clean.PNG" | prepend: site.baseurl }}" alt="Image a barcode"><br><br>
-            This would be the ideal case when the barcode is clean, there is no noise involved and it allows us to run few lines of code to isolate the bars.
-            My approach tried to turn an image into grayscale and use a gradient to separate the bars, but that turned out to be a mess as shown below:<br><br>
-            <img class="img-fluid rounded" src="{{ "/assets/barcode-dirty.PNG" | prepend: site.baseurl }}" alt="Image a barcode"><br><br>
-            <p>With this piece of code that would be ideal if we would want to find the barcode, but not useful when trying to find particular parts of it.</p>
-            <img class="img-fluid rounded" src="{{ "/assets/code1.PNG" | prepend: site.baseurl }}" alt="Image of code"><br><br>
-            <p>With the previous attempt failing, I found an interesting solution that works for angled pictures that will take the higest point they find of a corner and the second highest points of another corer (which normally should be on the same height), and calculates the angle that needs to be applied in order for these two points to be on the same level.<br>Here is an example of it + the code:</p><br>
-            <img class="img-fluid rounded" src="{{ "/assets/angle.PNG" | prepend: site.baseurl }}" alt="Re-angled image"><br>
-            <img class="img-fluid rounded" src="{{ "/assets/code2.PNG" | prepend: site.baseurl }}" alt="Another image of code"><br>
-            <p>In this case and on similar images with QR codes, it seems to do the trick quite well, with little trouble when tested on some particular images.</p>
+            <h4>On a more serious note...</h4>
+            <p>For my project that I am doing for my Image Processing class, I have been tasked with the responsability of handling the image rotation. That means that my goal would be to take an image as an input, rotate it to the right alignment and then pass the rotated image to my colleagues part of the code, where the rest of the magic can happen.<br>Here we can have a look at the code that does this for us and below we will see an explanation.</p><br>
+            <img class="img-fluid rounded" src="{{ "/assets/rotated.PNG" | prepend: site.baseurl }}" alt="Image code used for rotation"><br>
+            <h4>Some of the results produced on barcodes and QR codes</h4>
+            <img class="img-fluid rounded" src="{{ "/assets/5R5mX0JX.jpg" | prepend: site.baseurl }}" alt="Image of a barcdoe"><br><br>
+            <img class="img-fluid rounded" src="{{ "/assets/qr_code_rotated.PNG" | prepend: site.baseurl }}" alt="Image of a barcdoe"><br><br>
+            <img class="img-fluid rounded" src="{{ "/assets/barcodediag.jpg" | prepend: site.baseurl }}" alt="Image of a barcdoe"><br><br>
+            <img class="img-fluid rounded" src="{{ "/assets/Barcode_out.jpg" | prepend: site.baseurl }}" alt="Image of a barcdoe"><br><br>
+            <img class="img-fluid rounded" src="{{ "/assets/BackCover_CreateSpaceAutoBarcode.jpg" | prepend: site.baseurl }}" alt="Image of a barcdoe"><br><br>
+            <img class="img-fluid rounded" src="{{ "/assets/rotated_barcode_2.PNG" | prepend: site.baseurl }}" alt="Image of a barcdoe"><br><br>
+            <p>This code follows closely the idea of the code found in the previous post, with the one difference being that this one is improving the algorithm by first applying a GaussianBlur before thresholding so it gives better results on lower quality images. This has proven to be a great improvement on images that we found to be more difficult to deal with.</p>
+            <p>The sequence the code is following is simple:
+            <ol>
+                <li>Convert to Grayscale</li>
+                <li>Blur the image with a Gaussian Blur</li>
+                <li>Reverse the colours with a bitwise_not on the blurred image</li>
+                <li>Apply the threshold</li>
+                <li>Store the positive pixel locations ( 0 is off and 1 is on )</li>
+                <li>Determine the angle needed to align everything with minAreaRect</li>
+                <li>Test against the angle to see the direction of rotation</li>
+                <li>Get the center and calculate the rotation matrix needed to be applied</li>
+                <li>Rotate with warpAffine and return the image </li>
+            </ol>
+            </p>
         </div>
     </div>
     <!-- /.row -->
