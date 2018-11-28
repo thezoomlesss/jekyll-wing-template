@@ -40,13 +40,13 @@ layout: post
             <h4>Attempt three: NOW OR NEVER</h4>
             With a lot of googling and time spent on understanding some pretty basic concepts (which make me look back now and realise how little I knew), I managed to put together this code:</p><br>
             <p>What this does, instead of looking for corners, it tries to find the biggest structured element and draws the minimum rectangle that covers all the points of interest. By using the coordonates of the rectangle, we calculate the angle needed for clockwise or counterclockwise shift in order for the barcode to be finally displayed correctly.</p>
-            <img class="img-fluid rounded" src="{{ "/assets/code2.PNG" | prepend: site.baseurl }}" alt="Another image of code"><br>
-            <img class="img-fluid rounded" src="{{ "/assets/angle.PNG" | prepend: site.baseurl }}" alt="Re-angled image"><br>
+            <img class="img-fluid rounded" src="{{ "/assets/code2.PNG" | prepend: site.baseurl }}" alt="Another image of code"><br><br>
+            <img class="img-fluid rounded" src="{{ "/assets/angle.PNG" | prepend: site.baseurl }}" alt="Re-angled image"><br><br>
             <p>In this case and on similar images with QR codes, it seems to do the trick quite well, with little trouble when tested on some particular images. This can definitely be improved in the future...</p>
             <br><br><br>
             <h5>References used:</h5>
             <a href="https://docs.opencv.org/3.4.3/db/dd6/classcv_1_1RotatedRect.html">https://docs.opencv.org/3.4.3/db/dd6/classcv_1_1RotatedRect.html</a><br>
-            <a ref="https://docs.opencv.org/2.4/doc/tutorials/imgproc/shapedescriptors/bounding_rotated_ellipses/bounding_rotated_ellipses.html">https://docs.opencv.org/2.4/doc/tutorials/imgproc/shapedescriptors/bounding_rotated_ellipses/bounding_rotated_ellipses.html</a><br>
+            <a href="https://docs.opencv.org/2.4/doc/tutorials/imgproc/shapedescriptors/bounding_rotated_ellipses/bounding_rotated_ellipses.html">https://docs.opencv.org/2.4/doc/tutorials/imgproc/shapedescriptors/bounding_rotated_ellipses/bounding_rotated_ellipses.html</a><br>
             <a href="https://docs.opencv.org/3.0-beta/doc/py_tutorials/py_imgproc/py_geometric_transformations/py_geometric_transformations.html">https://docs.opencv.org/3.0-beta/doc/py_tutorials/py_imgproc/py_geometric_transformations/py_geometric_transformations.html</a><br>
             <a href="https://www.pyimagesearch.com/2017/01/02/rotate-images-correctly-with-opencv-and-python/">https://www.pyimagesearch.com/2017/01/02/rotate-images-correctly-with-opencv-and-python/</a><br>
             <a href="https://www.pyimagesearch.com/2017/02/20/text-skew-correction-opencv-python/">https://www.pyimagesearch.com/2017/02/20/text-skew-correction-opencv-python/</a><br>
