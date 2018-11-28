@@ -16,7 +16,7 @@ layout: post
             </p>
             <hr>
             <!-- Date/Time -->
-            <p>Posted on October 18, 2018 at 15:00</p>
+            <p>Posted on November 07, 2018 at 15:00</p>
             <hr>
             <!-- Preview Image -->
             <img class="img-fluid rounded" src="{{ "/assets/wall_aling.png" | prepend: site.baseurl }}" alt="Confused">
