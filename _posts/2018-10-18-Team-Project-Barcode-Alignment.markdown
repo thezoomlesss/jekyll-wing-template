@@ -33,9 +33,12 @@ layout: post
             This would be the ideal case when the barcode is clean, there is no noise involved and it allows us to run few lines of code to isolate the bars.
             My approach tried to turn an image into grayscale and use a gradient to separate the bars, but that turned out to be a mess as shown below:<br><br>
             <img class="img-fluid rounded" src="{{ "/assets/barcode-dirty.PNG" | prepend: site.baseurl }}" alt="Image a barcode"><br><br>
-            <p>With this piece of code that would be ideal if we would want to find the barcode, but not useful when trying to find particular parts of it.</p>
+            <h4>Attempt two: Find the corners and use them as reference</h4>
+            <p>With the previous attempt failing, I found an interesting idea where you would have to look for the corners of an angled barcode. Picking those will allow us to compare the positioning of the first two corners. By taking those points and calculating how much of a shift in the rotation is needed in order to level those two points, we can get the barcode to display nicely.</p><br>
+            <p>While some results were promising in the testing, others failed horribly if the corners were not detected properly. So I needed a new plan...<br>
+            While a lot of googling and time spent on understanding some pretty basic concepts (which make me look back now and realise how little I knew), I managed to put together this code:</p><br>
             <img class="img-fluid rounded" src="{{ "/assets/code1.PNG" | prepend: site.baseurl }}" alt="Image of code"><br><br>
-            <p>With the previous attempt failing, I found an interesting solution that works for angled pictures that will take the higest point they find of a corner and the second highest points of another corer (which normally should be on the same height), and calculates the angle that needs to be applied in order for these two points to be on the same level.<br>Here is an example of it + the code:</p><br>
+            <p>What this does, instead of looking for corners, it tries to find the biggest structured element and draws the minimum rectangle that covers all the points of interest. By using the coordonates of the rectangle, we calculate the angle needed for clockwise or counterclockwise shift in order for the barcode to be finally displayed correctly.</p>
             <img class="img-fluid rounded" src="{{ "/assets/angle.PNG" | prepend: site.baseurl }}" alt="Re-angled image"><br>
             <img class="img-fluid rounded" src="{{ "/assets/code2.PNG" | prepend: site.baseurl }}" alt="Another image of code"><br>
             <p>In this case and on similar images with QR codes, it seems to do the trick quite well, with little trouble when tested on some particular images.</p>
