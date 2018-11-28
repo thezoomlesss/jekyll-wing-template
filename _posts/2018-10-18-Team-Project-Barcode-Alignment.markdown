@@ -33,15 +33,26 @@ layout: post
             This would be the ideal case when the barcode is clean, there is no noise involved and it allows us to run few lines of code to isolate the bars.
             My approach tried to turn an image into grayscale and use a gradient to separate the bars, but that turned out to be a mess as shown below:<br><br>
             <img class="img-fluid rounded" src="{{ "/assets/barcode-dirty.PNG" | prepend: site.baseurl }}" alt="Image a barcode"><br><br>
+            <img class="img-fluid rounded" src="{{ "/assets/code1.PNG" | prepend: site.baseurl }}" alt="Image of code"><br><br>
             <h4>Attempt two: Find the corners and use them as reference</h4>
             <p>With the previous attempt failing, I found an interesting idea where you would have to look for the corners of an angled barcode. Picking those will allow us to compare the positioning of the first two corners. By taking those points and calculating how much of a shift in the rotation is needed in order to level those two points, we can get the barcode to display nicely.</p><br>
             <p>While some results were promising in the testing, others failed horribly if the corners were not detected properly. So I needed a new plan...<br>
-            While a lot of googling and time spent on understanding some pretty basic concepts (which make me look back now and realise how little I knew), I managed to put together this code:</p><br>
-            <img class="img-fluid rounded" src="{{ "/assets/code1.PNG" | prepend: site.baseurl }}" alt="Image of code"><br><br>
+            <h4>Attempt three: NOW OR NEVER</h4>
+            With a lot of googling and time spent on understanding some pretty basic concepts (which make me look back now and realise how little I knew), I managed to put together this code:</p><br>
             <p>What this does, instead of looking for corners, it tries to find the biggest structured element and draws the minimum rectangle that covers all the points of interest. By using the coordonates of the rectangle, we calculate the angle needed for clockwise or counterclockwise shift in order for the barcode to be finally displayed correctly.</p>
-            <img class="img-fluid rounded" src="{{ "/assets/angle.PNG" | prepend: site.baseurl }}" alt="Re-angled image"><br>
             <img class="img-fluid rounded" src="{{ "/assets/code2.PNG" | prepend: site.baseurl }}" alt="Another image of code"><br>
-            <p>In this case and on similar images with QR codes, it seems to do the trick quite well, with little trouble when tested on some particular images.</p>
+            <img class="img-fluid rounded" src="{{ "/assets/angle.PNG" | prepend: site.baseurl }}" alt="Re-angled image"><br>
+            <p>In this case and on similar images with QR codes, it seems to do the trick quite well, with little trouble when tested on some particular images. This can definitely be improved in the future...</p>
+            <br><br><br>
+            <h5>References used:</h5>
+            <a href="https://docs.opencv.org/3.4.3/db/dd6/classcv_1_1RotatedRect.html">https://docs.opencv.org/3.4.3/db/dd6/classcv_1_1RotatedRect.html</a><br>
+            <a ref="https://docs.opencv.org/2.4/doc/tutorials/imgproc/shapedescriptors/bounding_rotated_ellipses/bounding_rotated_ellipses.html">https://docs.opencv.org/2.4/doc/tutorials/imgproc/shapedescriptors/bounding_rotated_ellipses/bounding_rotated_ellipses.html</a><br>
+            <a href="https://docs.opencv.org/3.0-beta/doc/py_tutorials/py_imgproc/py_geometric_transformations/py_geometric_transformations.html">https://docs.opencv.org/3.0-beta/doc/py_tutorials/py_imgproc/py_geometric_transformations/py_geometric_transformations.html</a><br>
+            <a href="https://www.pyimagesearch.com/2017/01/02/rotate-images-correctly-with-opencv-and-python/">https://www.pyimagesearch.com/2017/01/02/rotate-images-correctly-with-opencv-and-python/</a><br>
+            <a href="https://www.pyimagesearch.com/2017/02/20/text-skew-correction-opencv-python/">https://www.pyimagesearch.com/2017/02/20/text-skew-correction-opencv-python/</a><br>
+            <a href="https://stackoverflow.com/questions/9041681/opencv-python-rotate-image-by-x-degrees-around-specific-point">https://stackoverflow.com/questions/9041681/opencv-python-rotate-image-by-x-degrees-around-specific-point</a><br>
+            <a href="https://www.tutorialkart.com/opencv/python/opencv-python-rotate-image/">https://www.tutorialkart.com/opencv/python/opencv-python-rotate-image/</a><br>
+            
         </div>
     </div>
     <!-- /.row -->
